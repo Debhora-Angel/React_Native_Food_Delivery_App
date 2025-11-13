@@ -8,7 +8,6 @@
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -16,14 +15,20 @@
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
+      "package": "com.myfirstapp.app",
+       "config": {
+    "googleMaps": {
+      "apiKey": "AIzaSyBFqSy-7_InkqoExnb_D7-Dq-poOax-C3o"
+    }
+  },
+      
       "edgeToEdgeEnabled": true
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "extra": {
+      "eas": {
+        "projectId": "6617f7d5-f234-4e57-ac96-f748ce44cec6"
+      }
+    },
+    "owner": "debhora15"
   }
 }
