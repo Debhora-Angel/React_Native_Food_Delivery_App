@@ -18,7 +18,7 @@
       "package": "com.myfirstapp.app",
        "config": {
     "googleMaps": {
-      "apiKey": "AIzaSyBFqSy-7_InkqoExnb_D7-Dq-poOax-C3o"
+      "apiKey": "process.env.GOOGLE_MAPS_KEY"
     }
   },
       
