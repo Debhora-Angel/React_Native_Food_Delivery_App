@@ -16,7 +16,7 @@ export default function OffersScreen() {
   const [copiedCode, setCopiedCode] = useState(null);
   const [countdown, setCountdown] = useState(300); // 5 mins flash timer
 
-  // ⏰ Flash Deal Timer
+  //  Flash Deal Timer
   useEffect(() => {
     const timer = setInterval(() => {
       setCountdown((prev) => (prev > 0 ? prev - 1 : 0));
@@ -36,7 +36,7 @@ export default function OffersScreen() {
     setTimeout(() => setCopiedCode(null), 2000);
   };
 
-  // 🎟 Offers Data
+  //  Offers Data
   const offers = [
     { id: 1, title: "20% OFF On First Order", code: "FIRSTORDER20", expiry: "Nov 30", tag: "💚 New" },
     { id: 2, title: "Flat ₹100 OFF Above ₹499", code: "SAVE100", expiry: "Dec 5", tag: "🔥 Trending" },
@@ -56,7 +56,7 @@ export default function OffersScreen() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* 🏆 Rewards Section */}
+        {/*  Rewards Section */}
         <LinearGradient colors={["#C9E4C5", "#A5D6A7"]} style={styles.rewardsCard}>
           <Ionicons name="trophy" size={40} color="#2E7D32" />
           <View>
@@ -65,7 +65,7 @@ export default function OffersScreen() {
           </View>
         </LinearGradient>
 
-        {/* 🎟 Active Offers */}
+        {/* Active Offers */}
         <Text style={styles.sectionTitle}>Active Offers</Text>
         {offers.map((offer) => (
           <LinearGradient
@@ -90,7 +90,7 @@ export default function OffersScreen() {
           </LinearGradient>
         ))}
 
-        {/* 💳 Bank / Payment Offers */}
+        {/* Bank / Payment Offers */}
         <Text style={styles.sectionTitle}>Bank & Payment Offers</Text>
         {bankOffers.map((bank) => (
           <View key={bank.id} style={styles.bankCard}>
@@ -105,7 +105,7 @@ export default function OffersScreen() {
           </View>
         ))}
 
-        {/* 🍔 Restaurant Offers */}
+        {/*  Restaurant Offers */}
         <Text style={styles.sectionTitle}>Restaurant Specials</Text>
         {restaurantOffers.map((res) => (
           <View key={res.id} style={styles.restaurantCard}>
@@ -121,7 +121,7 @@ export default function OffersScreen() {
           </View>
         ))}
 
-        {/* ⏰ Flash Deals */}
+        {/*  Flash Deals */}
         <Text style={styles.sectionTitle}>Flash Deals ⏰</Text>
         <LinearGradient colors={["#FFECB3", "#FFF9C4"]} style={styles.flashCard}>
           <Text style={styles.flashTitle}>🔥 50% OFF Burgers — Hurry Up!</Text>
@@ -131,7 +131,7 @@ export default function OffersScreen() {
           </TouchableOpacity>
         </LinearGradient>
 
-        {/* ❓ FAQs */}
+        {/*  FAQs */}
         <View style={styles.faqSection}>
           <Text style={styles.sectionTitle}>FAQs</Text>
           <Text style={styles.faqQuestion}>❓ How do I apply a coupon?</Text>

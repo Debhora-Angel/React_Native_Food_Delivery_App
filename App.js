@@ -151,7 +151,6 @@ export default function App() {
       <SafeAreaProvider>
         <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }} edges={["bottom"]}>
           <NavigationContainer>
-            {/* 👇 Root stack controls Login → MainTabs navigation */}
             <Stack.Navigator screenOptions={{ headerShown: false }}>
               <Stack.Screen name="Login" component={LoginScreen} />     
               <Stack.Screen name="MainTabs" component={MainTabs} />     

@@ -17,14 +17,19 @@ export default ({ config }) => ({
     supportsTablet: true
   },
   android: {
-    package: "com.myfirstapp.app",
-    edgeToEdgeEnabled: true,
-    config: {
-      googleMaps: {
-        apiKey: process.env.GOOGLE_MAPS_KEY
-      }
+  package: "com.myfirstapp.app",
+  edgeToEdgeEnabled: true,
+  permissions: [
+    "ACCESS_FINE_LOCATION",
+    "ACCESS_COARSE_LOCATION"
+  ],
+  config: {
+    googleMaps: {
+      apiKey: process.env.GOOGLE_MAPS_KEY
     }
-  },
+  }
+},
+
   extra: {
     eas: {
       projectId: "6617f7d5-f234-4e57-ac96-f748ce44cec6"

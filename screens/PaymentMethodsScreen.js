@@ -59,7 +59,7 @@ export default function PaymentMethodsScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
-      {/* ✅ Header */}
+      {/*  Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Ionicons name="arrow-back" size={24} color="#2E7D32" />
@@ -67,7 +67,7 @@ export default function PaymentMethodsScreen() {
         <Text style={styles.headerTitle}>Payment Methods</Text>
       </View>
 
-      {/* ✅ Payment Methods List */}
+      {/* Payment Methods List */}
       <FlatList
         data={paymentMethods}
         keyExtractor={(item) => item.id}
@@ -79,7 +79,7 @@ export default function PaymentMethodsScreen() {
               <Text style={styles.cardType}>{item.title}</Text>
             </View>
 
-            {/* ✅ Nested UPI Options */}
+            {/*  Nested UPI Options */}
             {item.upiOptions && (
               <View style={styles.upiContainer}>
                 {item.upiOptions.map((upi) => (

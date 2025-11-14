@@ -79,7 +79,7 @@ const [modalVisible, setModalVisible] = useState(false);
               )}
             />
 
-            {/* ✅ Cart Summary Section */}
+            {/* Cart Summary Section */}
             <View
               style={{
                 backgroundColor: "#E8F5E9",
@@ -128,20 +128,20 @@ const [modalVisible, setModalVisible] = useState(false);
                     Clear All
                   </Text>
                 </TouchableOpacity>
-<TouchableOpacity
-  onPress={() => navigation.navigate("Payment", { total: totalAmount })}
-  style={{
-    flex: 1,
-    backgroundColor: "#2E7D32",
-    padding: 12,
-    borderRadius: 10,
-    alignItems: "center",
-  }}
->
-  <Text style={{ color: "#fff", fontWeight: "700" }}>
-    Checkout
-  </Text>
-</TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("Payment", { total: totalAmount })}
+                style={{
+                  flex: 1,
+                  backgroundColor: "#2E7D32",
+                  padding: 12,
+                  borderRadius: 10,
+                  alignItems: "center",
+                }}
+              >
+                <Text style={{ color: "#fff", fontWeight: "700" }}>
+                  Checkout
+                </Text>
+              </TouchableOpacity>
 
 
               </View>

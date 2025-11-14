@@ -17,7 +17,7 @@ export default function LoginScreen({ navigation }) {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false); // ✅ Only for UI toggle
+  const [rememberMe, setRememberMe] = useState(false); 
 
   const handleLogin = async () => {
     if (!email.trim() || !password.trim()) {
@@ -27,7 +27,7 @@ export default function LoginScreen({ navigation }) {
 
     setLoading(true);
 
-    // Fake authentication for demo
+    // Fake authentication 
     setTimeout(() => {
       if (email.toLowerCase() === "test@gmail.com" && password === "12345") {
         navigation.replace("MainTabs");

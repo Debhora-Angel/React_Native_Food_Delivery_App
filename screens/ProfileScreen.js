@@ -23,7 +23,7 @@ export default function ProfileScreen() {
     { icon: "help-circle-outline", title: "Help Center" },
   ];
 
-  // ✅ Logout function
+  //  Logout function
   const handleLogout = async () => {
     try {
       await AsyncStorage.removeItem("user"); // clear login data
@@ -36,14 +36,14 @@ export default function ProfileScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
-      {/* ✅ Header */}
+      {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Ionicons name="arrow-back" size={24} color="#2E7D32" />
         </TouchableOpacity>
       </View>
 
-      {/* ✅ Profile Info */}
+      {/* Profile Info */}
       <View style={styles.profileSection}>
         <Image
           source={{
@@ -55,7 +55,7 @@ export default function ProfileScreen() {
         <Text style={styles.profileEmail}>jane.hop@email.com</Text>
       </View>
 
-      {/* ✅ Menu Items + Logout */}
+      {/* Menu Items + Logout */}
       <ScrollView
         contentContainerStyle={{ padding: 20, paddingBottom: 80 }}
         showsVerticalScrollIndicator={false}
@@ -78,7 +78,7 @@ export default function ProfileScreen() {
           </TouchableOpacity>
         ))}
 
-        {/* ✅ Logout Button */}
+        {/* Logout Button */}
         <View style={styles.logoutContainer}>
           <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
             <Ionicons name="log-out-outline" size={20} color="#fff" />

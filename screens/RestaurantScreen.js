@@ -11,7 +11,7 @@ export default function RestaurantScreen({ route, navigation }) {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
 
-  // ✅ Functions updated with unique restaurant–dish IDs
+  // Functions updated with unique restaurant–dish IDs
   const addItemToCart = (dish) => {
     const uniqueId = `${restaurant.id}-${dish.id}`;
     dispatch(addToCart({ ...dish, id: uniqueId }));
